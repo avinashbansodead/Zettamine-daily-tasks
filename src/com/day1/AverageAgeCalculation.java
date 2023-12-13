@@ -1,4 +1,4 @@
-package com.tasks.day_1;
+package com.day1;
 import java.util.Scanner;
 
 public class AverageAgeCalculation 
