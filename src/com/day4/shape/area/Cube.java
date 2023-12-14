@@ -1,6 +1,6 @@
 package com.day4.shape.area;
 
-public class Cube extends Shape
+public class Cube extends Shape implements Spatial
 {
 private double length;
 private double width;

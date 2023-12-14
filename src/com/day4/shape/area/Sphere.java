@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Sphere extends Shape{
+public class Sphere extends Shape implements Spatial{
 private double radius;
 	public double getRadius() {
 	return radius;
