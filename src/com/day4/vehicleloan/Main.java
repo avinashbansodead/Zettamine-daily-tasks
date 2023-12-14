@@ -24,19 +24,30 @@ public class Main {
 	     System.out.print("Enter the price: "+ (char)8377+" ");
 	     double price=sc.nextDouble();
 	     
-	     
-	     
-	     Vehicle vehicle = new Vehicle(vehicleNumber,modelNumber,vehicleType,price);
-	     VehicleLoanAndInsurance loanInsurance= new VehicleLoanAndInsurance(vehicle);
+	    if(price>0) 
+	    {
+	    	 Vehicle vehicle = new Vehicle(vehicleNumber,modelNumber,vehicleType,price);
+	    	 VehicleLoanAndInsurance loanInsurance= new VehicleLoanAndInsurance(vehicle);
+	    	 double loanAmount = loanInsurance.issueLoan();
+		     double insuranceAmount = loanInsurance.takeInsurance();
 
-	     double loanAmount = loanInsurance.issueLoan();
-	     double insuranceAmount = loanInsurance.takeInsurance();
+		     System.out.println("Loan Amount: " + (char)8377+" "+ loanAmount);
+		     System.out.println("Insurance Amount: "  + (char)8377+" "+ insuranceAmount);
+	    	 
+	    }
+	    else
+	    {
+	    	System.out.println("Enter valid vehicle price");
+	    }
+	     
+	    
+	     
 
-	     System.out.println("Loan Amount: " + (char)8377+" "+ loanAmount);
-	     System.out.println("Insurance Amount: "  + (char)8377+" "+ insuranceAmount);
+	    
 	 }
 
-	public static String getVehicleType(int option) {
+	public static String getVehicleType(int option) 
+	{
 		String type = null;
 		switch(option)
 	     {

@@ -30,7 +30,7 @@ public class VehicleLoanAndInsurance implements Loan, Insurance
 	 @Override
 	 public double takeInsurance()
 	 {
-	     if (vehicle.getPrice() <= 150000) 
+	     if (vehicle.getPrice() >0 &&vehicle.getPrice() <= 150000) 
 	     {
 	         return 3500;
 	     } 
@@ -44,6 +44,7 @@ public class VehicleLoanAndInsurance implements Loan, Insurance
 	     }
 	     else 
 	     {
+	    	 System.out.println("Enter valid vehicle price");
 	        return 0; 
 	     }
 	 }
