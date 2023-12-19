@@ -32,7 +32,7 @@ class Student
 
         System.out.print("Enter Roll No.: ");
         rollNo = sc.nextInt(); 
-        sc.nextLine(); // Consume newline
+        sc.nextLine(); 
         
         System.out.print("Enter Student Name: ");
         stdName = sc.nextLine();
