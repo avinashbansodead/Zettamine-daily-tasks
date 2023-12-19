@@ -10,10 +10,10 @@ public class NewWordAnalyser
 {
     public static void main(String[] args) 
     {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter Student's Article:");
-        String article = scanner.nextLine();
+        String article = sc.nextLine();
 
         String[] wordArray = article.split("[\\s,;:.? !]+");
  
@@ -38,7 +38,7 @@ public class NewWordAnalyser
     	{
     		System.out.println(wordCount+++". "+word);
     	}
-        scanner.close();
+        sc.close();
     }
 }
 
