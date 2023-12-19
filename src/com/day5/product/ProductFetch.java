@@ -43,7 +43,7 @@ scanner.nextLine();
             // Display result
             if (foundProduct != null) {
                 System.out.println("Product Name: " + foundProduct.getProductName());
-            } else {S
+            } else {
                 System.out.println("Product not found. Please enter a valid product ID.");
             }
 

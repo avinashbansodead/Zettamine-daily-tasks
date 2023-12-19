@@ -10,10 +10,10 @@ import java.util.Scanner;
 public class ProductEntry {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("How many products to be saved: ");
-        int n = scanner.nextInt();
+        int n = sc.nextInt();
 
         // List to store products
         List<Product> productList = new ArrayList<>();
@@ -21,9 +21,9 @@ public class ProductEntry {
         // Enter product details
         for (int i = 1; i <= n; i++) {
             System.out.print("Enter product id & product name of Product-" + i + ": ");
-            int productId = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
-            String productName = scanner.nextLine();
+            int productId = sc.nextInt();
+            sc.nextLine(); // Consume the newline character
+            String productName = sc.nextLine();
 
             // Create a new Product object
             Product product = new Product(productId, productName);
