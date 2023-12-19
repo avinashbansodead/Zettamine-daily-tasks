@@ -13,8 +13,6 @@ class Book
 private long ISBNno;
 private String bookTitle;
 private String bookAuthor;
-
-
 }
 
 
