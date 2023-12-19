@@ -45,59 +45,65 @@ public class Main
         }
     }
 
-    private static void addContact(Scanner scanner, PhoneBook phoneBookObj)
+    private static void addContact(Scanner sc, PhoneBook phoneBookObj)
     {
         System.out.println("Add a Contact:");
         System.out.print("Enter the First Name: ");
-        String firstName = scanner.next();
+        String firstName = sc.next();
         System.out.print("Enter the Last Name: ");
-        String lastName = scanner.next();
+        String lastName = sc.next();
         System.out.print("Enter the Phone No.: ");
-        long phoneNumber = scanner.nextLong();
+        long phoneNumber = sc.nextLong();
         System.out.print("Enter the Email: ");
-        String email = scanner.next();
+        String email = sc.next();
 
         Contact contact = new Contact(firstName, lastName, phoneNumber, email);
         phoneBookObj.addContact(contact);
     }
 
-    private static void displayAllContacts(PhoneBook phoneBookObj) {
+    private static void displayAllContacts(PhoneBook phoneBookObj)
+    {
         List<Contact> contacts = phoneBookObj.viewAllContacts();
         System.out.println("The contacts in the List are:");
-        for (Contact contact : contacts) {
-            System.out.println(
-                     contact.getFirstName() +
-                            "\t\t" + contact.getLastName() +
-                            "\t\t" + contact.getPhoneNumber() +
-                            "\t\t" + contact.getEmailId()
-            );
+        for (Contact contact : contacts) 
+        {
+            System.out.println(contact.getFirstName() 
+	                           + "\t\t" + contact.getLastName() 
+	                           + "\t\t" + contact.getPhoneNumber() 
+	                           + "\t\t" + contact.getEmailId());
         }
     }
 
-    private static void searchContactByPhone(Scanner scanner, PhoneBook phoneBookObj) {
+    private static void searchContactByPhone(Scanner scanner, PhoneBook phoneBookObj)
+    {
         System.out.print("Enter the Phone number to search contact: ");
         long phoneNumber = scanner.nextLong();
         Contact contact = phoneBookObj.viewContactByPhoneNo(phoneNumber);
-        if (contact != null) {
-            System.out.println("The contact is:\n" +
-                    "First Name: " + contact.getFirstName() +
-                    " | Last Name: " + contact.getLastName() +
-                    " | Phone No.: " + contact.getPhoneNumber() +
-                    " | Email: " + contact.getEmailId());
-        } else {
+        if (contact != null) 
+        {
+            System.out.println("The contact is:\n"
+            					+"First Name: " + contact.getFirstName() 
+            					+ " | Last Name: " + contact.getLastName() 
+            					+ " | Phone No.: " + contact.getPhoneNumber() 
+            					+ " | Email: "     + contact.getEmailId());
+        } else 
+        {
             System.out.println("Contact not found.");
         }
     }
 
-    private static void removeContact(Scanner scanner, PhoneBook phoneBookObj) {
+    private static void removeContact(Scanner scanner, PhoneBook phoneBookObj) 
+    {
         System.out.print("Enter the Phone number to remove: ");
         long phoneNumber = scanner.nextLong();
         System.out.print("Do you want to remove the contact (Y/N): ");
         String response = scanner.next();
 
-        if (response.equalsIgnoreCase("Y")) {
+        if (response.equalsIgnoreCase("Y")) 
+        {
             phoneBookObj.removeContact(phoneNumber);
-        } else {
+        } else 
+        {
             System.out.println("Contact removal aborted.");
         }
     }
